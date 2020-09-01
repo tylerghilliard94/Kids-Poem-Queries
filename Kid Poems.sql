@@ -76,7 +76,7 @@ WHERE WordCount = (SELECT MAX(WordCount) AS 'MaxWordCount'
 
 
 
--- Question 17
+-- Question 15
 Select Top 1 a.Name,
 Count(p.AuthorId) as 'AuthorCount'
 From Author a 
@@ -97,13 +97,14 @@ WHERE e.Name = 'Sadness';
 
 
 
--- Question 19
+-- Question 17
 SELECT Count(p.Title)
 
 FROM Poem p
 Left Join PoemEmotion pe on pe.PoemId = p.Id
 WHERE pe.PoemId IS NULL;
 
+-- Question 18
 SELECT Top 1 e.Name,
 COUNT(e.Name)
 
